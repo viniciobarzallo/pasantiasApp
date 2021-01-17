@@ -1,0 +1,101 @@
+ion-content>ion-list {
+    position: relative;
+  //  top: 30%;
+}
+
+
+// ion-content {
+//    // --background: url(../../../assets/Jupiter.jpg)no-repeat center center / cover;
+// }
+
+ion-content {
+    background-color: #07f1be;
+ }
+
+.btn-center-aling {
+    text-align: center!important;
+}
+
+.btn-center-aling ion-button {
+    --color: rgb(150, 11, 104);
+}
+
+.btn-center-aling ion-button:hover {
+    --color: black;
+}
+
+ion-item {
+    --background: transparent;
+    color: #000000;
+    --min-height: 40px;
+}
+
+ion-list {
+    background-color: transparent;
+}
+
+
+ion-button {
+    --background:#4890DC;
+}
+
+.horizontal{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+
+img{
+    width: 120px; height: 120px;
+}
+
+
+:host {
+    --min-height: 30px;
+}
+
+.item-avatar {
+    width: 60px !important;
+    height: 60px !important;
+}
+
+ion-toolbar {
+    --ion-background-color: #4890DC;
+    text-align: center;
+}
+
+ion-avatar {
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+:root {
+    /** primary **/
+    /** primary end **/
+    --ion-color-mango: #ffcc66;
+    --ion-color-mango-rgb: 255, 204, 102;
+    --ion-color-mango-contrast: #000000;
+    --ion-color-mango-contrast-rgb: 0, 0, 0;
+    --ion-color-mango-shade: #e0b45a;
+    --ion-color-mango-tint: #ffd175;
+    ion-tab-button.tab-selected {
+        ion-icon,
+        ion-label {
+            color: var(--ion-color-mango) !important;
+            --ion-color-base: var(--ion-color-mango) !important;
+        }
+    }
+}
+
+.ion-color-mango {
+    --ion-color-base: var(--ion-color-mango);
+    --ion-color-base-rgb: var(--ion-color-mango-rgb);
+    --ion-color-contrast: var(--ion-color-mango-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-mango-contrast-rgb);
+    --ion-color-shade: var(--ion-color-mango-shade);
+    --ion-color-tint: var(--ion-color-mango-tint);
+}

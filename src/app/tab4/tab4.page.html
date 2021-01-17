@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+
+    <ion-buttons slot="secondary">
+      <ion-button (click)="mostrarPop( $event )">
+        <ion-icon slot="icon-only" md="ellipsis-vertical" ></ion-icon> 
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+      
+  <ion-list>
+      
+
+      <ion-item>
+        <ion-label>Nombres:</ion-label>
+        <ion-input  [(ngModel)]="user1.nombre" type="text" readonly></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Cargo:</ion-label>
+        <ion-input  [(ngModel)]="user1.departamento" type="text" readonly></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Correo:</ion-label>
+        <ion-input [(ngModel)]="user1.email" type="text" readonly></ion-input>
+      </ion-item>
+
+      
+      <ion-item>
+        <ion-label>Teléfono:</ion-label>
+        <ion-input  [(ngModel)]="user1.celular" type="text" readonly></ion-input>
+      </ion-item>
+  </ion-list>
+  
+</ion-content>

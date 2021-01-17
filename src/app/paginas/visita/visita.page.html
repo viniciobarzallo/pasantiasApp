@@ -1,0 +1,124 @@
+<ion-header>
+  <ion-toolbar class="colorToolbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Visita Técnica</ion-title>
+
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content class="ion-padding" >
+
+     <ion-list>
+        <ion-item>
+        <ion-label position="stacked">Cédula:</ion-label>
+        <ion-input  [(ngModel)]="user2.cedula"  type="text" readonly></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Nombres Completos:</ion-label>
+        <ion-input [(ngModel)]="user2.nombre"  type="text"  [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Apellidos Completos:</ion-label>
+        <ion-input [(ngModel)]="user2.apellido"  type="text"  [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Correo Electonico:</ion-label>
+        <ion-input [(ngModel)]="user2.email"  typse="text"  [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Dirrecion:</ion-label>
+        <ion-input  [(ngModel)]="user2.direccionPrincipal" type="text"  [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item>
+
+      
+      <ion-item>
+        <ion-label position="stacked">Calle Secundaria:</ion-label>
+        <ion-input [(ngModel)]="user2.direccionSecundaria" maxlength="15" [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Referencia:</ion-label>
+        <ion-input  [(ngModel)]="user2.direccionReferencia" maxlength="15" [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item>
+
+      <!-- <ion-item>
+        <ion-label position="stacked">Telefono Convencional:</ion-label>
+        <ion-input [(ngModel)]="user2.convencional" maxlength="15" [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Celular:</ion-label>
+        <ion-input [(ngModel)]="user2.celular" maxlength="15" [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item> -->
+
+      <ion-item>
+        <ion-label position="stacked">Numero de Contrato:</ion-label>
+        <ion-input *ngFor="let char of user2.servicio" [(ngModel)]="char.numeroContrato" maxlength="15" [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item>
+
+      <!-- <ion-item>
+        <ion-label position="stacked">Plan Adquirido:</ion-label>
+        <ion-input *ngFor="let char of user2.servicio" [(ngModel)]="char.plan" maxlength="15" [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item> -->
+
+       <!-- <ion-item >
+        <ion-label position="stacked">IP:</ion-label>
+        <ion-input   name="" id="ips"  *ngFor="let char of user2.servicio" (change)="validateForm(char.ip)" [(ngModel)]="char.ip" maxlength="15" [readonly]='deshabilitarTexto' ></ion-input>
+        
+      </ion-item>  -->
+
+       <!-- <ion-item>
+        <ion-label position="stacked">Antena:</ion-label>
+        <ion-input [(ngModel)]="user2.antena.modelo" maxlength="15" [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item> 
+      
+      <ion-item>
+        <ion-label position="stacked">Contrasenia:</ion-label>
+        <ion-input *ngFor="let char of user2.servicio" [(ngModel)]="char.password" maxlength="15" [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item> -->
+
+      <ion-item>
+        <ion-label position="stacked">Obseraciones:</ion-label>
+        <ion-input *ngFor="let char of user2.servicio" [(ngModel)]="char.observaciones" maxlength="15" [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item>
+
+      <ion-item>   
+        <ion-label>Coordenadas:
+          <ion-buttons>
+            <ion-button>
+              {{user2.latitud}} {{user2.longitud}}
+            </ion-button>
+          </ion-buttons>
+        </ion-label>
+      </ion-item>
+   
+      <ion-item>
+        <ion-tab-button (click)="obtenerGeolocalizacion()">
+          <ion-icon name="locate-outline"></ion-icon>
+          <ion-label>Coordenadas</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button (click)="miUbicacion()" (click)="navegarMapas()">
+          <ion-icon name="map-outline"></ion-icon>
+          <ion-label>Google Maps</ion-label>
+        </ion-tab-button>
+      </ion-item>
+
+      <ion-item>
+        <ion-toolbar class="centrarBoton">
+          <ion-button (click)="actualizar()">Actualizar </ion-button>
+          <ion-button   (click)="textoDisable()" (click)="guardar()">Guardar</ion-button>
+        </ion-toolbar> 
+      </ion-item>
+
+    </ion-list>
+   
+
+  </ion-content>
+  
+  

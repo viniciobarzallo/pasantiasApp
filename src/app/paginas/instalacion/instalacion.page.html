@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar class="colorToolbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Instalación</ion-title>
+
+    <ion-buttons slot="secondary">
+      <ion-button (click)="mostrarPop( $event )">
+        <ion-icon slot="icon-only" md="ellipsis-vertical" ></ion-icon> 
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+      <!--
+      <input type="text" value="" name="cedula" [(ngModel)]="cedula" (change)="validadorDeCedula(cedula)" maxlength="10">
+      <small *ngIf="!validador" class="text-danger">Cedula Invalida</small>
+      -->
+
+    <ion-list>
+
+      <ion-item>
+        <ion-label position="stacked">Cédula:</ion-label>
+        <ion-input value={{user.id}} type="text" maxlength="10" placeholder="0101010101" [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Nombres Completos:</ion-label>
+        <ion-input value={{user.nombre}} type="text" placeholder="Apellidos Nombres" [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Tipo de Servicio:</ion-label>
+        <ion-input value={{user.tipoServicio}} type="text" [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Dirección:</ion-label>
+        <ion-input value={{user.direccion}} type="text" placeholder="Calle principal" [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Teléfonos:</ion-label>
+        <ion-input value={{user.telefono}} type="text" maxlength="9" [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Coordenadas:</ion-label>
+        <ion-input value={{user.coordenadas}} type="text" maxlength="9" [readonly]='deshabilitarTexto'></ion-input>
+      </ion-item>
+      
+
+      <ion-item>
+        <ion-label position="stacked">Plan Adquirido:</ion-label>
+          <ion-select disabled interface="popover">
+            <ion-select-option value="Basico">Básico</ion-select-option>
+            <ion-select-option value="Intermedio">Intermedio</ion-select-option>
+            <ion-select-option value="Alto">Alto</ion-select-option>
+          </ion-select>
+          
+      </ion-item>
+      
+      <ion-item >
+        <ion-label>Observación: </ion-label>
+          <ion-input  value={{user.observaciones}} type="text" maxlength="100" [readonly]='deshabilitarTexto'></ion-input>
+        
+      </ion-item> 
+       
+    </ion-list>
+   
+</ion-content>

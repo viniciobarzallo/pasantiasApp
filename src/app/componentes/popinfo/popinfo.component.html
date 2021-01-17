@@ -1,0 +1,12 @@
+
+<ion-list >
+   <!-- ng-click = muestra el popcontroller que esta en tab2.ts
+        (click)="onClick( i + 1 )" = al hacer click cierra el popcontroller
+        detail = puedan hacer click tanto en andriod como en ios
+  -->
+  <ion-item ng-click="mostrarPop($event)" 
+            (click)="onClick( i + 1 )"  
+            detail>
+    <ion-label (click)="cerrarSesion()">Cerrar sesión</ion-label>
+  </ion-item>
+</ion-list>

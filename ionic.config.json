@@ -1,0 +1,8 @@
+{
+  "name": "appastronet",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}
